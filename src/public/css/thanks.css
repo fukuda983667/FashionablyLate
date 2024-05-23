@@ -1,0 +1,50 @@
+.main {
+    background: #ffffff;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main_inner {
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; /* Ensure this is above the background text */
+}
+
+.thanks__content {
+    margin: auto;
+    padding: 30px 15px;
+    text-align: center; /* Center align the text */
+}
+
+.thanks__background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17vw; /* Font size relative to viewport width */
+    color: rgba(139, 121, 105, 0.05); /* Light grey color */
+    white-space: nowrap; /* Prevent text wrapping */
+    user-select: none; /* Prevent text selection */
+    z-index: 0; /* Ensure this is behind the content */
+}
+
+.thanks__heading {
+    position: relative; /* 相対位置を設定 */
+    color: #8B7969;
+    text-align: center;
+    z-index: 1;
+}
+
+.home__button {
+    position: relative; /* 相対位置を設定 */
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 35px;
+    background-color: #82756A;
+    color: white;
+    text-decoration: none;
+    z-index: 1;
+}

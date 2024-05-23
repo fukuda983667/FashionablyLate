@@ -1,0 +1,77 @@
+body {
+    font-family: 'Inika';
+    color: #8B7969;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+button:hover,
+button:focus {
+    outline: none;
+}
+/* header▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #E0DFDE;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 20px;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.header-utilities {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    margin: 0 auto;
+    color: #8B7969;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.header-nav {
+    position: absolute; /* 子要素に position: absolute; を適用 */
+    top: 50%; /* headerの上下中央 */
+    right: 0; /* 右端に配置 */
+    transform: translateY(-50%); /* 自身の高さの半分だけ上に移動して中央に配置 */
+}
+
+.header-nav li:last-child {
+    margin: 0;
+    /* 最後のli要素の右マージンを0に設定 */
+}
+
+.header-nav__button {
+    display: block;
+    width: 100px;
+    padding: 3px 5px;
+    background: rgba(240, 240, 240, 0.6);
+    color: #D9C6B5;
+    border: 1px solid #D9C6B5;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* header▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+
+.main {
+    background: #ffffff;
+}
+
+.main_inner {
+    margin: 0 auto;
+    padding: 20px 20px;
+    max-width: 1200px;
+}

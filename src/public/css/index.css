@@ -1,0 +1,163 @@
+nav {
+    display: none;
+}
+
+.contact-form__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.contact-form__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form__group-content {
+    width: 600px;
+}
+
+.form__group-title {
+    margin-top: 6px;
+}
+
+.form__label--item {
+    font-size: 20px;
+}
+
+.form__label--required {
+    margin-left: 1px;
+    padding: 4px 6px;
+    color: #FF9494;
+    font-size: 20px;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.form__input--text,
+.form__select {
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__input--radio {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.form__input--text input,
+.form__textarea textarea,
+.form__select select {
+    padding: 10px;
+    height: 38px;
+    width: 100%;
+    background-color: #F4F4F4;
+    color: #BEB1A6;
+    border: none;
+    font-size: 14px;
+
+    appearance: none;
+}
+
+input::placeholder {
+    color: #BEB1A6;
+}
+
+input {
+    color: #8B7969;
+}
+
+input[name="last_name"],
+input[name="first_name"] {
+    width: 280px;
+}
+
+input[name="gender"] {
+    margin-left: 70px;
+    height: 20px; /* 丸の高さ */
+    width: 20px; /* 丸の幅 */
+    background-color: #FFFFFF;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+input[name="gender"]:first-child {
+    margin-left: 15px;
+}
+
+input[name="tel_1"],
+input[name="tel_2"],
+input[name="tel_3"] {
+    width: 170px;
+    text-align: center;
+}
+
+.form__select {
+    position: relative;
+    width: 55%;
+}
+
+.form__select select {
+    cursor: pointer;
+}
+
+.form__select::after {
+    content: '';
+    margin-top: 3px;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent; /* 左側の辺 */
+    border-right: 14px solid transparent; /* 右側の辺 */
+    border-top: 15px solid #BEB1A6; /* 上辺 */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* optionのスタイルはブラウザで制御されており、cssのみでは限りがある。 */
+.form__select select .placeholder {
+    color: #BEB1A6; /* プレースホルダーの文字色 */
+}
+
+.form__select select option {
+    color: #8B7969; /* 通常のオプションの文字色 */
+}
+
+.form__textarea textarea {
+    height: 130px; /* 必要に応じて高さを調整 */
+    width: 100%;
+    resize: none; /* リサイズハンドルを非表示にする */
+}
+
+.form__button-submit {
+    margin-top: 30px;
+    padding: 10px 20px;
+    height: 46px;
+    width: 160px;
+    background-color: #82756A; /* 背景色 */
+    color: #fff; /* テキスト色 */
+    border: none; /* ボーダーなし */
+    cursor: pointer; /* カーソルをポインターに */
+    font-size: 16px; /* フォントサイズ */
+}
