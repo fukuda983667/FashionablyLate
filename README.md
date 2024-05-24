@@ -1,7 +1,5 @@
 # FashionablyLate
 
-このプロジェクトは、NGINX、MySQL、Laravel、Dockerを使用して構築されたWebアプリケーションです。
-
 ## 前提条件
 
 - Dockerがインストールされていること
@@ -67,10 +65,13 @@
 
 9. アプリケーションがhttp://localhost で利用可能になります。
 
-## 使用法
+## 仕様技術(実行環境)
 
-- NGINXはポート80で待ち受けており、http://localhost でアクセスできます。
-- Laravelアプリケーションのコードは`app`ディレクトリにマウントされています。変更を加えると、コンテナ内で即座に反映されます。
+- PHP : 7.4.9
+- Laravel : 8.83.27
+- MySQL : 8.0.26
+- NGINX : 1.21.1
+- docker-compose.yml : 3.8
 
 ## 注意事項
 
