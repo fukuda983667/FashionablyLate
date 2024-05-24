@@ -91,7 +91,7 @@
 ## ローカルリポジトリの削除  
 `git clone`したローカルリポジトリを完全に削除します。  
 ```
-sudo rm -rf ローカルリポジトリのディレクトリ名
+sudo rm -rf FashionablyLate_fukuda_20240525
 ```
 
 ## 未実装
