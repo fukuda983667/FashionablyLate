@@ -131,8 +131,9 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        // これいらないかも
+        'email' => [
+            'username_match' => 'メールアドレスは「ユーザー名@ドメイン」形式で入力してください',
         ],
     ],
 
