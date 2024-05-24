@@ -1,6 +1,6 @@
 # FashionablyLate
 
-このプロジェクトは、NGINX、MySQL、Laravel、Docker、およびDockerを使用して構築されたWebアプリケーションです。
+このプロジェクトは、NGINX、MySQL、Laravel、Dockerを使用して構築されたWebアプリケーションです。
 
 ## 前提条件
 
@@ -15,7 +15,7 @@
     git clone https://github.com/fukuda983667/FashionablyLate
     ```
 
-2. Docker Composeを使用してコンテナを作成・起動します。
+2. Docker Composeを使用してコンテナを作成・起動します。※Docker Descktop起動時に実行してください。
 
     ```bash
     docker-compose up -d --build
@@ -36,7 +36,7 @@
     cp .env.example .env
     ```
 
-3. `.env`ファイルを編集し、必要な環境変数を設定します（11～17行目）。
+3. `.env`ファイルを編集し、必要な環境変数を設定します（11～16行目）。
 
    ```
    DB_CONNECTION=mysql
