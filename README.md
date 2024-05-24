@@ -1,6 +1,6 @@
 # FashionablyLate
 
-このプロジェクトは、NGINX、MySQL、Laravel、Docker、およびDockerを使用して構築されたWebアプリケーションです。
+このプロジェクトは、NGINX、MySQL、Laravel、Dockerを使用して構築されたWebアプリケーションです。
 
 ## 前提条件
 
@@ -15,7 +15,7 @@
     git clone https://github.com/fukuda983667/FashionablyLate
     ```
 
-2. Docker Composeを使用してコンテナを作成・起動します。
+2. Docker Composeを使用してコンテナを作成・起動します。※Docker Descktop起動時に実行してください。
 
     ```bash
     docker-compose up -d --build
@@ -36,7 +36,7 @@
     cp .env.example .env
     ```
 
-3. `.env`ファイルを編集し、必要な環境変数を設定します（11～17行目）。
+3. `.env`ファイルを編集し、必要な環境変数を設定します（11～16行目）。
 
    ```
    DB_CONNECTION=mysql
@@ -47,28 +47,22 @@
    DB_PASSWORD=laravel_pass
    ```
 
-5. Docker Composeを使用してコンテナを起動します。
-
-    ```bash
-    docker-compose up -d
-    ```
-
-6. Laravelアプリケーションの依存関係をインストールします。
-
-    ```bash
-    docker-compose exec app composer install
-    ```
-
 7. アプリケーションキーを生成します。
 
     ```bash
-    docker-compose exec app php artisan key:generate
+    php artisan key:generate
     ```
 
 8. データベースのマイグレーションを実行します。
 
     ```bash
-    docker-compose exec app php artisan migrate
+    php artisan migrate
+    ```
+
+8. データベースのシーディングを実行します。
+
+    ```bash
+    php artisan db:seed
     ```
 
 9. アプリケーションがhttp://localhost で利用可能になります。
