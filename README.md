@@ -1,19 +1,33 @@
 # FashionablyLate
-# プロジェクト名
 
-このプロジェクトは、NGINX、MySQL、Laravel、Docker、およびDocker Composeを使用して構築されたWebアプリケーションです。
+このプロジェクトは、NGINX、MySQL、Laravel、Docker、およびDockerを使用して構築されたWebアプリケーションです。
 
 ## 前提条件
 
 - Dockerがインストールされていること
 - Docker Composeがインストールされていること
 
-## セットアップ
+## 環境構築
 
-1. このリポジトリをクローンします。
+1. リポジトリをクローンしたい任意のディレクトリで以下のコマンドを実行してください。
 
     ```bash
     git clone https://github.com/fukuda983667/FashionablyLate
+    ```
+
+2. Docker Composeを使用してコンテナを作成・起動します。
+
+    ```bash
+    docker-compose up -d --build
+    ```
+    
+3. phpコンテナにログイン→`composer`をインストールします。
+
+    ```bash
+    docker-compose exec php bash
+    ```
+    ```
+    composer install
     ```
 
 2. `.env.example`ファイルをコピーして`.env`ファイルを作成します。
@@ -22,33 +36,42 @@
     cp .env.example .env
     ```
 
-3. `.env`ファイルを編集し、必要な環境変数を設定します（例: データベース接続情報、アプリケーションキーなど）。
+3. `.env`ファイルを編集し、必要な環境変数を設定します（11～17行目）。
 
-4. Docker Composeを使用してコンテナを起動します。
+   ```
+   DB_CONNECTION=mysql
+   DB_HOST=mysql
+   DB_PORT=3306
+   DB_DATABASE=laravel_db
+   DB_USERNAME=laravel_user
+   DB_PASSWORD=laravel_pass
+   ```
+
+5. Docker Composeを使用してコンテナを起動します。
 
     ```bash
     docker-compose up -d
     ```
 
-5. Laravelアプリケーションの依存関係をインストールします。
+6. Laravelアプリケーションの依存関係をインストールします。
 
     ```bash
     docker-compose exec app composer install
     ```
 
-6. アプリケーションキーを生成します。
+7. アプリケーションキーを生成します。
 
     ```bash
     docker-compose exec app php artisan key:generate
     ```
 
-7. データベースのマイグレーションを実行します。
+8. データベースのマイグレーションを実行します。
 
     ```bash
     docker-compose exec app php artisan migrate
     ```
 
-8. アプリケーションがhttp://localhost で利用可能になります。
+9. アプリケーションがhttp://localhost で利用可能になります。
 
 ## 使用法
 
