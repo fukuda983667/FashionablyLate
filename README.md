@@ -20,7 +20,7 @@
     ```bash
     docker-compose up -d --build
     ```
-    
+
 3. phpコンテナにログイン→`composer`をインストールします。
 
     ```bash
