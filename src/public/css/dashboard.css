@@ -232,6 +232,26 @@
     text-align: left;
 }
 
+.contact-table__header.name {
+    width: 285px;
+}
+
+.contact-table__header.gender {
+    width: 130px;
+}
+
+.contact-table__header.email {
+    width: 370px;
+}
+
+.contact-table__header.category {
+    width: 270px;
+}
+
+.contact-table__header.detail {
+    width: 145px;
+}
+
 .contact-table__data {
     height: 70px;
     text-align: left;

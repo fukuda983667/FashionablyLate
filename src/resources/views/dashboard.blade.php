@@ -61,11 +61,11 @@
 
     <table class="contact-table">
         <tr class="contact-table__row">
-            <th class="contact-table__header">お名前</th>
-            <th class="contact-table__header">性別</th>
-            <th class="contact-table__header">メールアドレス</th>
-            <th class="contact-table__header">お問い合わせの種類</th>
-            <th class="contact-table__header">詳細</th>
+            <th class="contact-table__header name">お名前</th>
+            <th class="contact-table__header gender">性別</th>
+            <th class="contact-table__header email">メールアドレス</th>
+            <th class="contact-table__header category">お問い合わせの種類</th>
+            <th class="contact-table__header detail"></th>
         </tr>
         @foreach ($contacts as $contact)
         <tr class="contact-table__row">
