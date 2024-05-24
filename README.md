@@ -88,6 +88,12 @@
 - ユーザ登録ページ : http://localhost/register
 - ログインページ : http://localhost/login
 
+## ローカルリポジトリの削除  
+`git clone`したローカルリポジトリを完全に削除します。  
+```
+sudo rm -rf ローカルリポジトリのディレクトリ名
+```
+
 ## 未実装
 
 - confirm.blade.php 74行目  
