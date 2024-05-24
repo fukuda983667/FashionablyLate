@@ -47,28 +47,22 @@
    DB_PASSWORD=laravel_pass
    ```
 
-5. Docker Composeを使用してコンテナを起動します。
-
-    ```bash
-    docker-compose up -d
-    ```
-
-6. Laravelアプリケーションの依存関係をインストールします。
-
-    ```bash
-    docker-compose exec app composer install
-    ```
-
 7. アプリケーションキーを生成します。
 
     ```bash
-    docker-compose exec app php artisan key:generate
+    php artisan key:generate
     ```
 
 8. データベースのマイグレーションを実行します。
 
     ```bash
-    docker-compose exec app php artisan migrate
+    php artisan migrate
+    ```
+
+8. データベースのシーディングを実行します。
+
+    ```bash
+    php artisan db:seed
     ```
 
 9. アプリケーションがhttp://localhost で利用可能になります。
