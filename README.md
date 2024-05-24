@@ -87,3 +87,15 @@
 - 管理画面 : http://localhost/admin
 - ユーザ登録ページ : http://localhost/register
 - ログインページ : http://localhost/login
+
+## 未実装
+
+- confirm.blade.php 74行目  
+「修正」ボタンを押して入力内容保持したまま前の画面に戻るために`onclick=history.back()`としているがjavascriptだった。
+
+- fortify register  
+ユーザ登録後に自動でログインしてしまう。自動ログインの処理をスキップ(無効)させたかった。
+
+- fortify login,registerバリデーションルール
+FormRequestを継承したリクエストクラスを新規作成して、これを適用しなければいけなかった？
+
